@@ -1,10 +1,18 @@
 public class Reader {
 
-    String fullName;
-    int numberLibraryCard;
-    String faculty;
-    String dateOfBirth;
-    String phoneNumber;
+    private String fullName;
+    private int numberLibraryCard;
+    private String faculty;
+    private String dateOfBirth;
+    private String phoneNumber;
+
+    public Reader(String fullName, int numberLibraryCard, String faculty, String dateOfBirth, String phoneNumber) {
+        this.fullName = fullName;
+        this.numberLibraryCard = numberLibraryCard;
+        this.faculty = faculty;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
+    }
 
     public void takeBook(int numberOfBooks) {
         System.out.println(this.fullName + " взял " + numberOfBooks + "книги");
@@ -40,10 +48,6 @@ public class Reader {
         for(int i = 0; i < books.length; i++) {
             System.out.println(books[i].getNameBook());
         }
-    }
-
-    public void returnBook() {
-
     }
 
 }
